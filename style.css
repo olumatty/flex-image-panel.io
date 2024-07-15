@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+body{
+    box-sizing: border-box;
+    background-color: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel{
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color:white;
+    text-align: center;
+    transition:
+     font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+     flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+     background-color 0.3s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex:1;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel1{
+    background-image:url(https://images.unsplash.com/photo-1719844841024-3c7166816fc7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D://unsplash.com/photos/a-mountain-is-reflected-in-the-still-water-of-a-lake-l4xUUnampgU);
+}
+.panel3{
+    background-image:url(https://images.unsplash.com/photo-1719783280805-4a85511753b1?q=80&w=1571&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.panel5{
+    background-image:url(https://images.unsplash.com/photo-1719597528858-71b82a7a90e7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+}
+.panel4{
+    background-image:url(https://images.unsplash.com/photo-1601237638932-74a777ed88db?q=80&w=1430&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.panel2{
+    background-image: url(https://images.unsplash.com/photo-1719386218564-c622403d91d9?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.panel > *{
+    margin:0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel > *:first-child{transform:translateY(-100%);}
+.panel.open-active > *:first-child {transform:translateY(0);}
+.panel > *:last-child{transform:translateY(100%);}
+.panel.open-active > *:last-child{transform:translateY(0);}
+
+.panel p{
+    text-transform: uppercase;
+    font-family: "Amatic SC", cursive;
+    font-size:2em;
+    text-shadow:0 0 4px rgba(0,0,0,0.72), 0 0 14px rgba(0,0,0,0.45);
+}
+
+.panel p:nth-child(2){
+    font-size: 4em;
+}
+
+.panel.open{
+    flex: 5;
+    font-size: 40px;
+}
+
+
